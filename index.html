@@ -4,92 +4,284 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Your Name | Resume</title>
+  <title>Your Name | Computer Engineering Resume</title>
+  <meta 
+    name="description" 
+    content="Resume website of Your Name, a Computer Engineering student focused on software, embedded systems, automation, and digital technology." 
+  />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <main class="resume-container">
+  <div class="background-grid"></div>
+  <div class="scanline"></div>
 
-    <section class="hero">
-      <div>
-        <h1>Your Name</h1>
-        <p class="role">Information Technology Student | Web Developer | Automation Support</p>
-        <p class="summary">
-          I build practical digital solutions with experience in web development,
-          technical documentation, IT support, and industrial automation systems.
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="logo">Y/N</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="status-badge">Computer Engineering Student</p>
+
+        <h1>
+          Your Name
+          <span>Building systems between code, circuits, and control.</span>
+        </h1>
+
+        <p class="hero-description">
+          I am a Computer Engineering student interested in software development,
+          embedded systems, industrial automation, networking, and practical
+          technology solutions. I enjoy working on systems where hardware and
+          software meet.
         </p>
 
-        <div class="links">
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-          <a href="resume.pdf" target="_blank">Download Resume</a>
+        <div class="hero-actions">
+          <a href="resume.pdf" class="btn primary-btn" target="_blank">
+            Download Resume
+          </a>
+          <a href="#projects" class="btn secondary-btn">
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="profile-frame">
+          <div class="avatar-placeholder">
+            <span>CE</span>
+          </div>
+        </div>
+
+        <div class="profile-terminal">
+          <p><span>&gt;</span> role: Computer Engineering Student</p>
+          <p><span>&gt;</span> focus: Software + Hardware Systems</p>
+          <p><span>&gt;</span> status: Open to learning, projects, and internship opportunities</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-block" id="about">
+      <div class="section-heading">
+        <p class="section-code">01 // ABOUT</p>
+        <h2>Profile Summary</h2>
+      </div>
+
+      <div class="glass-card">
+        <p>
+          I am currently developing my foundation in computer engineering through
+          programming, technical documentation, system troubleshooting, and hands-on
+          technology projects. My interests include web development, automation
+          systems, embedded technology, computer networks, and building tools that
+          solve real operational problems.
+        </p>
+
+        <p>
+          My goal is to grow into an engineer who can understand both the digital
+          logic of software and the physical behavior of hardware systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section-block" id="skills">
+      <div class="section-heading">
+        <p class="section-code">02 // SKILLS</p>
+        <h2>Technical Stack</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>HTML, CSS, JavaScript, C/C++, Python basics, Git, GitHub</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Computer Engineering</h3>
+          <p>Digital logic, microcontrollers, embedded systems, circuit fundamentals</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Automation</h3>
+          <p>PLC fundamentals, HMI concepts, technical documentation, system diagnostics</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>IT & Networking</h3>
+          <p>Windows troubleshooting, basic networking, file management, system setup</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Write a short professional introduction here. Keep it specific:
-        your field, your strengths, your current experience, and what kind
-        of role or opportunity you are targeting.
-      </p>
-    </section>
+    <!-- PROJECTS SECTION -->
+    <section class="section-block" id="projects">
+      <div class="section-heading">
+        <p class="section-code">03 // PROJECTS</p>
+        <h2>Selected Projects</h2>
+      </div>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>GitHub</span>
-        <span>Technical Documentation</span>
-        <span>PLC / HMI Basics</span>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-header">
+            <p class="project-number">PROJECT_01</p>
+            <span class="project-type">Web</span>
+          </div>
+
+          <h3>Personal Resume Website</h3>
+
+          <p>
+            Designed and deployed a responsive resume website using HTML, CSS,
+            and GitHub Pages to present technical skills, projects, and experience.
+          </p>
+
+          <div class="tech-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>GitHub Pages</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <p class="project-number">PROJECT_02</p>
+            <span class="project-type">Engineering</span>
+          </div>
+
+          <h3>Technical Documentation</h3>
+
+          <p>
+            Created structured documentation for technical processes, including
+            troubleshooting steps, system setup notes, and procedure references.
+          </p>
+
+          <div class="tech-list">
+            <span>Documentation</span>
+            <span>Systems</span>
+            <span>Reports</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <p class="project-number">PROJECT_03</p>
+            <span class="project-type">Automation</span>
+          </div>
+
+          <h3>Automation Learning Projects</h3>
+
+          <p>
+            Explored PLC, HMI, and industrial automation concepts through learning
+            exercises, simulations, and real-world technical support exposure.
+          </p>
+
+          <div class="tech-list">
+            <span>PLC</span>
+            <span>HMI</span>
+            <span>Automation</span>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
+    <!-- EXPERIENCE SECTION -->
+    <section class="section-block" id="experience">
+      <div class="section-heading">
+        <p class="section-code">04 // EXPERIENCE</p>
+        <h2>Experience</h2>
+      </div>
 
-      <div class="item">
-        <h3>Portfolio Website</h3>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content">
+            <h3>IT / Technical Intern</h3>
+            <p class="timeline-meta">Company Name — 2026</p>
+            <p>
+              Assisted with website updates, technical documentation, software
+              configuration, troubleshooting, and digital workflow support.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content">
+            <h3>Computer Engineering Student</h3>
+            <p class="timeline-meta">School Name — Present</p>
+            <p>
+              Studying computing, electronics, software development, hardware
+              systems, and engineering problem-solving.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section-block" id="education">
+      <div class="section-heading">
+        <p class="section-code">05 // EDUCATION</p>
+        <h2>Education</h2>
+      </div>
+
+      <div class="glass-card">
+        <h3>Bachelor of Science in Computer Engineering</h3>
+        <p class="muted-text">Your University Name — Expected Graduation Year</p>
+
         <p>
-          Built and deployed a responsive website using HTML, CSS, and GitHub Pages.
+          Relevant areas: programming, digital systems, electronics, computer
+          architecture, embedded systems, networking, and engineering design.
         </p>
       </div>
-
-      <div class="item">
-        <h3>Automation Documentation</h3>
-        <p>
-          Created technical reports and step-by-step guides for troubleshooting and system setup.
-        </p>
-      </div>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-
-      <div class="item">
-        <h3>IT / Technical Intern</h3>
-        <p class="meta">Company Name — 2026</p>
-        <p>
-          Assisted with website updates, technical documentation, software setup,
-          and troubleshooting tasks.
-        </p>
+    <!-- CONTACT SECTION -->
+    <section class="section-block contact-section" id="contact">
+      <div class="section-heading">
+        <p class="section-code">06 // CONTACT</p>
+        <h2>Connect</h2>
       </div>
-    </section>
 
-    <section>
-      <h2>Education</h2>
+      <div class="contact-card">
+        <p>
+          Interested in internships, collaboration, technical projects, or
+          engineering-related opportunities.
+        </p>
 
-      <div class="item">
-        <h3>Bachelor of Science in Information Technology</h3>
-        <p class="meta">University Name — Expected Graduation Year</p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        </div>
       </div>
     </section>
 
   </main>
+
+  <footer class="footer">
+    <p>Designed by Your Name • Computer Engineering Resume</p>
+  </footer>
 
 </body>
 </html>
