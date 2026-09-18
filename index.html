@@ -3,36 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <meta
+    name="description"
+    content="Lucky I. Ampalayohan — graduating Computer Engineering student with experience in application development, database management, industrial automation, PLC programming, and AI-assisted technical workflows."
+  />
   <title>Lucky Ampalayohan | Computer Engineering Portfolio</title>
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Background Effects -->
-  <div class="page-grid"></div>
-  <div class="orb orb-one"></div>
-  <div class="orb orb-two"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="topographic-field" aria-hidden="true"></div>
 
-  <!-- Header -->
   <header class="site-header">
-    <nav class="navbar">
-      <a href="#home" class="logo">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#home" class="logo" aria-label="Lucky Ampalayohan home">
         <span class="logo-mark">LA</span>
-        <span class="logo-text">Lucky Ampalayohan</span>
+        <span class="logo-copy">
+          <strong>Lucky Ampalayohan</strong>
+          <small>Computer Engineering</small>
+        </span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#experience">Timeline</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#credentials">Credentials</a></li>
@@ -42,328 +50,506 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section id="home" class="hero section">
-      <div class="hero-content">
-        <p class="eyebrow">Computer Engineering Student · Tech Portfolio</p>
-
-        <h1>
-          Building clean, functional, and future-ready
-          <span>digital systems.</span>
-        </h1>
-
-        <p class="hero-description">
-          I am a Computer Engineering student focused on software development,
-          web technologies, automation concepts, and practical engineering-based
-          problem solving. This portfolio highlights my technical growth,
-          academic work, and project experience.
+      <div class="hero-copy reveal">
+        <p class="eyebrow hero-kicker">DIGITAL RESUME</p>
+        <h1>Lucky I. Ampalayohan</h1>
+        <p class="hero-role">Graduating Computer Engineering Student</p>
+        <p class="hero-description hero-specialties">
+          Application Development <span>·</span> Database Systems <span>·</span> PLC / Industrial Automation <span>·</span> Embedded Systems
         </p>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-card">
-            <span class="stat-number">CPE</span>
-            <span class="stat-label">Academic Focus</span>
-          </div>
-
-          <div class="stat-card">
-            <span class="stat-number">Web</span>
-            <span class="stat-label">Development</span>
-          </div>
-
-          <div class="stat-card">
-            <span class="stat-number">Tech</span>
-            <span class="stat-label">Systems Thinking</span>
-          </div>
+          <a href="#experience" class="btn btn-primary">View Timeline</a>
+          <a href="#projects" class="btn btn-secondary">Projects</a>
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div class="hero-visual reveal" aria-label="Profile panel">
         <div class="profile-frame">
-          <div class="profile-card">
-            <div class="scan-line"></div>
+          <div class="corner corner-tl"></div>
+          <div class="corner corner-tr"></div>
+          <div class="corner corner-bl"></div>
+          <div class="corner corner-br"></div>
 
+          <div class="profile-card">
+            <div class="scan-line" aria-hidden="true"></div>
+            <div class="profile-status"><span></span> PORTFOLIO // ACTIVE</div>
             <img
               src="images/Ampalayohan_Pic2.jpg"
-              alt="Profile picture of Lucky Ampalayohan"
+              alt="Portrait of Lucky Ampalayohan"
               class="profile-img"
             />
-
             <div class="profile-info">
-              <p class="profile-label">Portfolio Identity</p>
-              <h2>Lucky Ampalayohan</h2>
-              <p>Computer Engineering Student</p>
+              <p class="micro-label">SYSTEM IDENTITY</p>
+              <h2>Lucky I. Ampalayohan</h2>
+              <p>Computer Engineering · Software · Automation</p>
             </div>
           </div>
 
-          <div class="floating-tag tag-one">HTML</div>
-          <div class="floating-tag tag-two">CSS</div>
-          <div class="floating-tag tag-three">GitHub</div>
+          <div class="floating-tag tag-three">AUTOMATION</div>
+          <div class="floating-tag tag-one">SOFTWARE</div>
+          <div class="floating-tag tag-two">HARDWARE</div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <div class="signal-divider" aria-hidden="true">
+      <span>01</span><i></i><span>ENGINEERING PROFILE</span><i></i><span>READY</span>
+    </div>
+
     <section id="about" class="section about">
-      <div class="section-heading">
-        <p class="eyebrow">About Me</p>
-        <h2>Engineering mindset with a software-first direction.</h2>
+      <div class="section-heading reveal">
+        <p class="eyebrow">PROFILE // 01</p>
+        <h2>Computer Engineering built around systems, not silos.</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-card large-card">
-          <h3>Who I Am</h3>
+        <article class="panel panel-wide reveal">
+          <p class="panel-index">01.A</p>
+          <h3>Professional Profile</h3>
           <p>
-            I am developing my foundation in computer engineering through
-            hands-on work in programming, web design, system logic, and
-            technology documentation. I enjoy converting technical ideas into
-            usable outputs, especially when the solution needs to be clear,
-            organized, and practical.
+            I am a graduating Bachelor of Science in Computer Engineering student at the University of
+            San Jose-Recoletos. My experience spans application development, database management,
+            embedded systems, PLC programming, research, and technical documentation. I am especially
+            interested in roles where software and industrial technology meet.
           </p>
-
           <p>
-            My approach is simple: understand the system, break the problem
-            down, build the structure, then improve the details until the result
-            is reliable and presentable.
+            I approach engineering work by understanding the process first, structuring the data and
+            logic, then refining the implementation for reliability, maintainability, and a clear user
+            experience.
           </p>
-        </div>
+        </article>
 
-        <div class="about-card">
-          <h3>Current Focus</h3>
-          <ul class="clean-list">
-            <li>Front-end web development</li>
-            <li>GitHub Pages deployment</li>
-            <li>Technical documentation</li>
-            <li>Engineering logic and automation concepts</li>
+        <article class="panel reveal">
+          <p class="panel-index">01.B</p>
+          <h3>Current Direction</h3>
+          <ul class="terminal-list">
+            <li>Application & web development</li>
+            <li>Database-backed internal systems</li>
+            <li>Industrial automation & PLCs</li>
+            <li>AI-assisted productivity workflows</li>
+            <li>Technical documentation & support</li>
           </ul>
-        </div>
-
-        <div class="about-card">
-          <h3>Professional Direction</h3>
-          <p>
-            I am interested in technology roles involving software development,
-            industrial systems, automation, IT support, and digital solutions
-            that improve real-world workflows.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-      <div class="section-heading center">
-        <p class="eyebrow">Technical Stack</p>
-        <h2>Core skills and working knowledge.</h2>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <div class="skill-icon">01</div>
-          <h3>Web Development</h3>
-          <p>
-            HTML, CSS, responsive layouts, landing pages, portfolio websites,
-            and GitHub Pages deployment.
-          </p>
         </article>
 
-        <article class="skill-card">
-          <div class="skill-icon">02</div>
-          <h3>Programming Logic</h3>
+        <article class="panel reveal">
+          <p class="panel-index">01.C</p>
+          <h3>Current Learning</h3>
+          <p class="course-title">ChatGPT for Work: Productivity &amp; Automation</p>
+          <p class="muted">Coursera · In progress</p>
           <p>
-            Problem decomposition, conditional logic, data handling, and
-            structured implementation.
-          </p>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-icon">03</div>
-          <h3>Version Control</h3>
-          <p>
-            Git, GitHub repositories, commits, branches, deployment workflow,
-            and project version tracking.
-          </p>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-icon">04</div>
-          <h3>Technical Documentation</h3>
-          <p>
-            Clear reporting, procedural guides, screenshots, system summaries,
-            and user-facing documentation.
-          </p>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-icon">05</div>
-          <h3>Systems Thinking</h3>
-          <p>
-            Understanding how hardware, software, networked systems, and users
-            interact inside a working process.
-          </p>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-icon">06</div>
-          <h3>UI Structure</h3>
-          <p>
-            Clean visual hierarchy, professional layout design, section spacing,
-            readability, and user-centered presentation.
+            Developing more disciplined prompt-engineering, source-grounding, workflow automation, and
+            generative-AI productivity practices. Certificate intentionally not listed until completed.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-      <div class="section-heading">
-        <p class="eyebrow">Selected Work</p>
-        <h2>Projects and practical outputs.</h2>
-      </div>
-
-      <div class="project-list">
-        <article class="project-card featured-project">
-          <div class="project-content">
-            <span class="project-tag">Featured</span>
-            <h3>Professional Portfolio Website</h3>
-            <p>
-              A personal GitHub Pages portfolio designed to present academic
-              background, technical skills, and project experience using a
-              clean professional interface.
-            </p>
-
-            <div class="project-meta">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>GitHub Pages</span>
-            </div>
-          </div>
-
-          <div class="project-side">
-            <span class="project-number">01</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-content">
-            <span class="project-tag">Web Design</span>
-            <h3>Responsive Static Website Layout</h3>
-            <p>
-              A structured front-end design focused on clean navigation,
-              consistent spacing, readable content sections, and mobile
-              responsiveness.
-            </p>
-
-            <div class="project-meta">
-              <span>UI Layout</span>
-              <span>Responsive Design</span>
-            </div>
-          </div>
-
-          <div class="project-side">
-            <span class="project-number">02</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-content">
-            <span class="project-tag">Documentation</span>
-            <h3>Technical Report and Process Documentation</h3>
-            <p>
-              Documentation work involving issue summaries, solution records,
-              configuration steps, and user guides for future reference.
-            </p>
-
-            <div class="project-meta">
-              <span>Reports</span>
-              <span>Process Guide</span>
-            </div>
-          </div>
-
-          <div class="project-side">
-            <span class="project-number">03</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section id="credentials" class="section credentials">
-      <div class="section-heading center">
-        <p class="eyebrow">Background</p>
-        <h2>Academic and professional profile.</h2>
+    <section id="experience" class="section experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TIMELINE // 02</p>
+        <h2>Experience &amp; education.</h2>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-label">Education</span>
-            <h3>Computer Engineering Student</h3>
-            <p>
-              Building a foundation in computing, engineering principles,
-              software logic, and technology-based problem solving.
-            </p>
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">MAR–SEP<br />2026</span>
           </div>
-        </div>
+          <div class="timeline-content panel">
+            <div class="timeline-header">
+              <div>
+                <p class="micro-label">WATCHDOG AUTOMATION</p>
+                <h3>IT Department — OJT / Internship</h3>
+              </div>
+              <span class="status-pill">Industry Experience</span>
+            </div>
+            <p>
+              Worked on practical software and IT tasks in an automation-oriented environment, with a
+              focus on internal applications, structured data, source control, troubleshooting, and
+              technical communication.
+            </p>
+            <ul class="experience-list">
+              <li>
+                <strong>Application Development:</strong> built and refined internal web and mobile tools,
+                user interfaces, forms, search workflows, exports, and operational utilities.
+              </li>
+              <li>
+                <strong>Database Management:</strong> worked with structured application data, CRUD
+                workflows, local databases, and cloud-backed systems used by internal applications.
+              </li>
+              <li>
+                <strong>Version Control &amp; Deployment:</strong> used Git and GitHub branches, commits,
+                repository workflows, and deployment-oriented handoffs.
+              </li>
+              <li>
+                <strong>Prompt Engineering:</strong> applied structured prompting and AI-assisted workflows
+                for coding, debugging, research, documentation, and iterative problem solving.
+              </li>
+              <li>
+                <strong>Technical Support &amp; Documentation:</strong> produced work logs, procedures,
+                configuration notes, issue summaries, and implementation guidance for technical users.
+              </li>
+            </ul>
+            <div class="chip-row">
+              <span>Application Development</span>
+              <span>Database Management</span>
+              <span>Git / GitHub</span>
+              <span>Prompt Engineering</span>
+              <span>Technical Documentation</span>
+            </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-label">Development</span>
-            <h3>Web and GitHub Pages Practice</h3>
-            <p>
-              Creating and deploying static websites using HTML, CSS, Git,
-              GitHub repositories, and custom design structures.
-            </p>
-          </div>
-        </div>
+            <div class="ojt-focus-grid" aria-label="OJT training highlights">
+              <article class="ojt-focus">
+                <p class="micro-label">OJT TECHNICAL TRAINING // COMPLETED</p>
+                <h4>Siemens S7-1500 Basic to Intermediate PLC Programming</h4>
+                <p>
+                  Formal hands-on PLC training completed during the 2026 OJT period, covering Siemens
+                  automation systems, PLC hardware/configuration, structured programming, HMI integration,
+                  PROFIBUS DP, Industrial Ethernet, and VFD communication concepts.
+                </p>
+                <a href="#credentials" class="text-link">View PLC certificate ↓</a>
+              </article>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-label">Technical Growth</span>
-            <h3>Systems, Documentation, and Automation Interest</h3>
+              <article class="ojt-focus ojt-focus-pending">
+                <p class="micro-label">OJT AI LEARNING // IN PROGRESS</p>
+                <h4>Coursera — ChatGPT for Work: Productivity &amp; Automation</h4>
+                <p>
+                  Current coursework in prompt engineering, source-grounded AI use, productivity workflows,
+                  and practical automation. The certificate will be inserted after course completion.
+                </p>
+                <span class="pending-label">Certificate slot reserved</span>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2021–2026</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <div class="timeline-header">
+              <div>
+                <p class="micro-label">UNIVERSITY OF SAN JOSE-RECOLETOS</p>
+                <h3>Bachelor of Science in Computer Engineering</h3>
+              </div>
+              <span class="status-pill">Education · Graduating</span>
+            </div>
             <p>
-              Exploring practical technology workflows, technical reports,
-              automation logic, and digital systems used in real environments.
+              Academic foundation spanning software development, embedded systems, databases, mixed signals,
+              IoT, research, computer architecture, and engineering system design.
             </p>
           </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2024–2025</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <p class="micro-label">USJ-R COMPUTER ENGINEERING SOCIETY</p>
+            <h3>Former President</h3>
+            <p>
+              Leadership experience coordinating student activities, technical events, teamwork, and
+              communication within the Computer Engineering student organization.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal education-item">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2015–2021</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <p class="micro-label">MOTHER MARY’S CHILDREN SCHOOL</p>
+            <h3>Junior &amp; Senior High School</h3>
+            <p>Secondary education completed in Cebu.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal education-item">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2011–2015</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <p class="micro-label">MOTHER MARY’S CHILDREN SCHOOL</p>
+            <h3>Elementary Education</h3>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal education-item">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2010–2011</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <p class="micro-label">ST. CATHERINE’S COLLEGE</p>
+            <h3>Primary Education</h3>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal education-item">
+          <div class="timeline-rail">
+            <span class="timeline-node"></span>
+            <span class="timeline-date">2007–2010</span>
+          </div>
+          <div class="timeline-content panel compact-panel">
+            <p class="micro-label">ST. CECILIA’S COLLEGE</p>
+            <h3>Early Education / Kindergarten</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TECHNICAL MATRIX // 03</p>
+        <h2>Hardware + software capability map.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-code">SW.01</div>
+          <h3>Application Development</h3>
+          <p>C#, .NET MAUI, HTML, CSS, JavaScript, responsive UI, Git, GitHub, GitHub Pages.</p>
+          <div class="meter"><span style="--level: 82%"></span></div>
+          <small>Hands-on project and internship use</small>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-code">DB.02</div>
+          <h3>Databases &amp; Data</h3>
+          <p>SQL fundamentals, SQLite, MySQL, cloud database workflows, structured CRUD, Excel/Sheets.</p>
+          <div class="meter"><span style="--level: 76%"></span></div>
+          <small>Application-focused data management</small>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-code">PLC.03</div>
+          <h3>PLC &amp; Industrial Automation</h3>
+          <p>
+            Siemens S7-1500 training, TIA Portal concepts, PLC hardware/configuration, structured PLC
+            programming, HMI integration, PROFIBUS DP, Industrial Ethernet, and VFD integration concepts.
+          </p>
+          <div class="meter"><span style="--level: 70%"></span></div>
+          <small>Formal basic-to-intermediate training</small>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-code">HW.04</div>
+          <h3>Embedded Hardware</h3>
+          <p>PIC16F877A, ESP32, Arduino, FPGA Cyclone V, logic gates, 555 timer, sensors, IoT concepts.</p>
+          <div class="meter"><span style="--level: 72%"></span></div>
+          <small>Academic prototyping and embedded systems</small>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-code">AI.05</div>
+          <h3>AI &amp; Prompt Engineering</h3>
+          <p>
+            Structured prompting, iterative refinement, source requests, AI-assisted coding/debugging,
+            productivity workflows, ML fundamentals, and image-processing research.
+          </p>
+          <div class="meter"><span style="--level: 74%"></span></div>
+          <small>Active learning and practical workflow use</small>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-code">DOC.06</div>
+          <h3>Technical Communication</h3>
+          <p>
+            Work logs, technical reports, procedures, issue documentation, user guidance, visual design,
+            and presentation of engineering information.
+          </p>
+          <div class="meter"><span style="--level: 84%"></span></div>
+          <small>Documentation across academic and IT work</small>
+        </article>
+      </div>
+
+      <p class="skill-note reveal">
+        Note: meters are visual grouping indicators, not formal proficiency scores or certifications.
+      </p>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SELECTED WORK // 04</p>
+        <h2>Projects across software, embedded systems, and engineering research.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured-project reveal">
+          <div class="project-meta">
+            <span>2025</span><span>Mobile App</span><span>MVVM</span>
+          </div>
+          <h3>Cebu Jeepney Commuters’ Guide</h3>
+          <p>
+            Mobile application for searching Cebu jeepney codes, routes, stops, passenger types, and
+            vehicle types. Designed with MVVM and integrated with OpenStreetMap for map-based route context.
+          </p>
+          <div class="chip-row"><span>.NET MAUI</span><span>Maps</span><span>Mobile UI</span><span>Data Management</span></div>
+          <span class="project-id">P/01</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta"><span>2025</span><span>Embedded Systems</span></div>
+          <h3>Ball Color Segregator</h3>
+          <p>
+            Embedded robot that detects colored balls using a sensor and sorts them into moving containers,
+            with control logic implemented around the PIC16F877A microcontroller.
+          </p>
+          <div class="chip-row"><span>PIC16F877A</span><span>Sensors</span><span>Embedded C</span></div>
+          <span class="project-id">P/02</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta"><span>2024</span><span>I.CpE.P. Robothon</span><span>Champion · Region VII</span></div>
+          <h3>SALT Tech — Solar Algae Tree</h3>
+          <p>
+            Concept combining microalgae-based carbon capture with solar-energy infrastructure for dense
+            urban spaces where conventional tree planting is constrained.
+          </p>
+          <div class="chip-row"><span>Renewable Energy</span><span>IoT Concept</span><span>Systems Design</span></div>
+          <span class="project-id">P/03</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta"><span>2023</span><span>I.CpE.P. Robothon</span><span>National Qualifier</span></div>
+          <h3>MANGO — Bus Monitoring System</h3>
+          <p>
+            Public-transport concept featuring multilingual ticketing, smartphone access, and IoT-enabled
+            bus-stop monitoring. Advanced to the national competition after winning Region VII.
+          </p>
+          <div class="chip-row"><span>IoT</span><span>Mobility</span><span>System Concept</span></div>
+          <span class="project-id">P/04</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta"><span>2024</span><span>Desktop App</span></div>
+          <h3>Industrial Trade Jobs</h3>
+          <p>
+            Desktop application concept for connecting clients with industrial-trade workers, including
+            job requests, negotiation, and worker acceptance workflows using a structured MVVM approach.
+          </p>
+          <div class="chip-row"><span>C#</span><span>.NET MAUI</span><span>MVVM</span><span>JSON</span></div>
+          <span class="project-id">P/05</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-meta"><span>2024</span><span>Mixed Signals</span></div>
+          <h3>Smart Aquarium Monitoring System</h3>
+          <p>
+            Sensor-based monitoring and semi-automation concept for aquarium water condition, level,
+            pressure-related readings, PPM monitoring, OLED display, and filtration support.
+          </p>
+          <div class="chip-row"><span>Sensors</span><span>OLED</span><span>Automation</span></div>
+          <span class="project-id">P/06</span>
+        </article>
+
+        <article class="project-card research-project reveal">
+          <div class="project-meta"><span>Research</span><span>Computer Vision</span></div>
+          <h3>PBR Chick Data Profiling for Non-Invasive Gender Identification</h3>
+          <p>
+            Research involving image processing and data profiling of day-old Plymouth Barred Rock chicks,
+            exploring measurable visual traits as groundwork for non-invasive gender-identification methods.
+          </p>
+          <div class="chip-row"><span>Image Processing</span><span>Data Profiling</span><span>ML Foundations</span></div>
+          <span class="project-id">R/01</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials" class="section credentials">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CREDENTIALS // 05</p>
+        <h2>Training, competition, and academic milestones.</h2>
+      </div>
+
+      <div class="credential-layout">
+        <article class="certificate-card reveal">
+          <div class="certificate-visual">
+            <img
+              src="images/siemens-s7-1500-certificate.png"
+              alt="Siemens S7-1500 Basic to Intermediate PLC Programming Course certificate"
+            />
+            <div class="certificate-scan" aria-hidden="true"></div>
+          </div>
+          <div class="certificate-copy">
+            <p class="micro-label">FORMAL TECHNICAL TRAINING · JULY 6–10, 2026</p>
+            <h3>Siemens S7-1500 Basic to Intermediate PLC Programming Course</h3>
+            <p>
+              Completed hands-on training covering Siemens automation systems, PLC hardware and program
+              structure, PROFIBUS DP, TIA/STEP programming environments, HMI integration, Industrial
+              Ethernet, and VFD communication concepts.
+            </p>
+            <a href="images/siemens-s7-1500-certificate.png" target="_blank" rel="noopener" class="text-link">
+              View certificate ↗
+            </a>
+          </div>
+        </article>
+
+        <div class="credential-list">
+          <article class="credential-row credential-pending reveal">
+            <span class="credential-year">2026</span>
+            <div>
+              <h3>ChatGPT for Work: Productivity &amp; Automation — Coursera</h3>
+              <p>In progress · Certificate image and verification link to be inserted after completion.</p>
+            </div>
+          </article>
+          <article class="credential-row reveal">
+            <span class="credential-year">2024</span>
+            <div><h3>Region VII Robothon Champion</h3><p>I.CpE.P. · SALT Tech: Solar Algae Tree</p></div>
+          </article>
+          <article class="credential-row reveal">
+            <span class="credential-year">2023</span>
+            <div><h3>Region VII Robothon Champion</h3><p>I.CpE.P. · MANGO: Bus Monitoring System</p></div>
+          </article>
+          <article class="credential-row reveal">
+            <span class="credential-year">2024</span>
+            <div><h3>National Robothon Participant</h3><p>I.CpE.P. national competition</p></div>
+          </article>
+          <article class="credential-row reveal">
+            <span class="credential-year">2024</span>
+            <div><h3>USJ-R Embelympics Organizer</h3><p>Technical event organization and student leadership</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section contact">
-      <div class="contact-card">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s connect professionally.</h2>
+      <div class="contact-card reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">CONTACT // 06</p>
+          <h2>Open to software, IT, automation, and engineering opportunities.</h2>
           <p>
-            For academic, project, internship, or collaboration inquiries, you
-            may reach me through my listed contact channels.
+            For professional, project, internship-to-employment, or technical collaboration inquiries,
+            contact me by email or review my GitHub work.
           </p>
         </div>
-
         <div class="contact-actions">
-          <a href="mailto:luckyacads@gmail.com" class="btn btn-primary">
-            Email Me
-          </a>
-
-          <a href="https://github.com/luckyacads" target="_blank" class="btn btn-secondary">
-            GitHub Profile
-          </a>
+          <a href="mailto:luckyacads@gmail.com" class="btn btn-primary">luckyacads@gmail.com</a>
+          <a href="https://github.com/luckyacads" target="_blank" rel="noopener" class="btn btn-secondary">GitHub ↗</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2026 Lucky Ampalayohan. Built with HTML, CSS, and GitHub Pages.</p>
+    <div>
+      <span>© 2026 Lucky I. Ampalayohan</span>
+      <span class="footer-separator">//</span>
+      <span>Computer Engineering Portfolio</span>
+    </div>
+    <div class="footer-status"><span></span> SYSTEM ONLINE</div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
