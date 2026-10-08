@@ -1491,3 +1491,697 @@ ul {
     align-items: flex-start;
   }
 }
+
+
+/* =============================================================
+   V4 THEME — BLACK / CHROMATIC PURPLE / SUBTLE PINK
+   Inspired by the supplied purple mood references without using
+   any game artwork. Content photography and certificates stay
+   in their original color; only interface/effect layers are tinted.
+   ============================================================= */
+:root {
+  --bg: #07050d;
+  --bg-soft: #0d0916;
+  --panel: rgba(14, 9, 25, 0.88);
+  --panel-solid: #100a1b;
+  --text: #f8f7fb;
+  --muted: #b5aec3;
+  --faint: #756d83;
+  --line: rgba(183, 148, 246, 0.18);
+  --line-strong: rgba(196, 164, 255, 0.42);
+  --violet-1: #6d28d9;
+  --violet-2: #8b5cf6;
+  --violet-3: #a855f7;
+  --pink: #ec7ab7;
+  --pink-soft: #f0a2ca;
+  --glow-violet: rgba(139, 92, 246, 0.28);
+  --glow-pink: rgba(236, 122, 183, 0.16);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+body {
+  position: relative;
+  background:
+    radial-gradient(circle at 78% 7%, rgba(109, 40, 217, .15), transparent 30%),
+    radial-gradient(circle at 14% 28%, rgba(236, 122, 183, .055), transparent 24%),
+    radial-gradient(circle at 72% 78%, rgba(139, 92, 246, .08), transparent 34%),
+    linear-gradient(180deg, #07050d 0%, #08050f 42%, #050409 100%);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  pointer-events: none;
+  border-radius: 48% 52% 62% 38% / 44% 54% 46% 56%;
+  filter: blur(72px);
+  opacity: .38;
+}
+
+body::before {
+  width: min(48vw, 720px);
+  height: min(38vw, 560px);
+  top: 5vh;
+  right: -14vw;
+  background: conic-gradient(from 215deg, rgba(89, 34, 196, .34), rgba(168, 85, 247, .22), rgba(236, 72, 153, .10), rgba(59, 29, 111, .22), rgba(89, 34, 196, .34));
+  transform: rotate(-9deg);
+}
+
+body::after {
+  width: min(42vw, 620px);
+  height: min(28vw, 420px);
+  left: -17vw;
+  bottom: 7vh;
+  background: radial-gradient(ellipse at center, rgba(168, 85, 247, .17), rgba(236, 122, 183, .08) 42%, transparent 70%);
+  transform: rotate(18deg);
+}
+
+body::selection {
+  color: #fff;
+  background: #7c3aed;
+}
+
+.noise {
+  opacity: .07;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(221, 201, 255, .38) 0 1px, transparent 1.2px),
+    radial-gradient(circle at 75% 60%, rgba(245, 184, 218, .18) 0 1px, transparent 1.2px);
+}
+
+.page-grid {
+  background-image:
+    linear-gradient(rgba(170, 133, 236, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(170, 133, 236, .035) 1px, transparent 1px);
+}
+
+.topographic-field {
+  background:
+    linear-gradient(180deg, rgba(7,5,13,.10), rgba(20,10,37,.74) 55%, #07050d 92%),
+    radial-gradient(circle at 75% 12%, rgba(139,92,246,.24), transparent 37%),
+    url("images/topographic-lines.jpg") center top / cover no-repeat;
+  opacity: .52;
+  filter: grayscale(1) contrast(1.18);
+  mix-blend-mode: screen;
+}
+
+.site-header {
+  border-bottom-color: rgba(182, 143, 245, .18);
+  background: rgba(7, 5, 13, .78);
+  box-shadow: 0 10px 40px rgba(28, 9, 54, .16);
+}
+
+.logo-mark {
+  border-color: rgba(208, 174, 255, .56);
+  color: #fff;
+  background: linear-gradient(145deg, #5420ad 0%, #7c3aed 50%, #a855f7 78%, #d768ad 120%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 0 22px rgba(139,92,246,.18);
+}
+
+.logo-copy small,
+.panel-index,
+.micro-label,
+.skill-code {
+  color: #a596bc;
+}
+
+.nav-links a {
+  color: #c7bed4;
+}
+
+.nav-links a::after {
+  background: linear-gradient(90deg, #8b5cf6, #ec7ab7);
+  box-shadow: 0 0 12px rgba(168,85,247,.45);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #fff;
+}
+
+.nav-links .nav-cta {
+  color: #fff;
+  border-color: rgba(200, 167, 255, .55);
+  background: linear-gradient(120deg, #5b21b6, #7c3aed 62%, #b64e91 128%);
+  box-shadow: 0 10px 30px rgba(89, 37, 180, .18);
+}
+
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus-visible {
+  color: #fff;
+  border-color: rgba(240, 191, 220, .78);
+  background: linear-gradient(120deg, #6d28d9, #8b5cf6 60%, #ca5e9c 125%);
+}
+
+.nav-toggle {
+  border-color: rgba(187, 151, 243, .30);
+  background: rgba(20, 12, 33, .70);
+}
+
+.nav-toggle > span:not(.sr-only) {
+  background: #d9c8f7;
+}
+
+.eyebrow {
+  color: #c6a9f4;
+}
+
+.section-heading h2,
+.contact-card h2,
+.hero h1 {
+  text-shadow: 0 0 34px rgba(107, 45, 200, .10);
+}
+
+.hero-kicker {
+  color: #c7a9f5;
+}
+
+.hero-role {
+  color: #ddd4eb;
+}
+
+.hero-description {
+  color: #b8aec8;
+}
+
+.hero-specialties span {
+  color: #a46eef;
+}
+
+.btn {
+  border-color: rgba(190, 157, 244, .36);
+}
+
+.btn-primary {
+  color: #fff;
+  border-color: rgba(200, 167, 255, .62);
+  background: linear-gradient(118deg, #5b21b6, #7c3aed 58%, #b44e91 125%);
+  box-shadow: 0 12px 34px rgba(91, 33, 182, .20);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  color: #fff;
+  border-color: rgba(237, 182, 217, .78);
+  background: linear-gradient(118deg, #6d28d9, #8b5cf6 58%, #ca619f 125%);
+}
+
+.btn-secondary {
+  color: #e9e3f2;
+  background: rgba(16, 10, 28, .64);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: rgba(190, 146, 255, .70);
+  background: rgba(39, 20, 67, .72);
+}
+
+.panel,
+.skill-card,
+.project-card,
+.credential-row,
+.ojt-focus,
+.timeline-content,
+.contact-card {
+  border-color: rgba(185, 147, 244, .19);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(117, 57, 201, .08), transparent 34%),
+    linear-gradient(180deg, rgba(18, 12, 31, .93), rgba(8, 6, 14, .94));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.018);
+}
+
+.panel::before,
+.project-card::before,
+.ojt-focus::before {
+  background: linear-gradient(90deg, #7c3aed, #a855f7 62%, #ec7ab7);
+  box-shadow: 0 0 18px rgba(139,92,246,.36);
+}
+
+.profile-frame::before {
+  border-color: rgba(190, 151, 245, .22);
+  background:
+    linear-gradient(145deg, rgba(38, 18, 69, .34), rgba(4,3,8,.90)),
+    radial-gradient(circle at 82% 14%, rgba(158, 88, 245, .18), transparent 34%),
+    url("images/topographic-grid.jpg") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.28);
+  opacity: .78;
+  box-shadow: 0 0 54px rgba(105, 45, 186, .13);
+}
+
+.profile-card {
+  border-color: rgba(199, 166, 251, .38);
+  background: #09060f;
+  box-shadow: 0 38px 90px rgba(0,0,0,.54), 0 0 48px rgba(98, 43, 177, .10);
+}
+
+.profile-card::before {
+  background:
+    repeating-linear-gradient(to bottom, rgba(205, 185, 240, .025) 0 1px, transparent 1px 7px),
+    linear-gradient(90deg, transparent, rgba(165, 105, 243, .035), transparent);
+}
+
+.profile-status {
+  border-color: rgba(187, 151, 244, .33);
+  color: #f8f5ff;
+  background: rgba(10, 6, 17, .78);
+}
+
+.profile-status span,
+.footer-status span {
+  background: #c69bff;
+  box-shadow: 0 0 12px rgba(168,85,247,.90), 0 0 24px rgba(236,122,183,.22);
+}
+
+.scan-line,
+.certificate-scan {
+  background: linear-gradient(90deg, transparent, #8b5cf6 20%, #d49bff 50%, #ec7ab7 80%, transparent);
+  box-shadow: 0 0 18px rgba(139,92,246,.74), 0 0 28px rgba(236,122,183,.16);
+}
+
+/* Content images intentionally stay in full color. */
+.profile-img,
+.certificate-visual img {
+  filter: none;
+}
+
+.profile-info {
+  border-top-color: rgba(186, 149, 244, .20);
+  background: linear-gradient(180deg, rgba(8,5,13,.93), rgba(11,6,19,.98));
+}
+
+.profile-info > p:last-child {
+  color: #b9aec9;
+}
+
+.floating-tag {
+  color: #e8dcfb;
+  border-color: rgba(190, 151, 247, .35);
+  background: rgba(13, 7, 23, .91);
+  box-shadow: 0 8px 28px rgba(0,0,0,.32), 0 0 20px rgba(105,45,186,.08);
+}
+
+.tag-three {
+  border-color: rgba(229, 139, 194, .30);
+  color: #f1c6de;
+}
+
+.signal-divider {
+  color: #8e82a1;
+  border-color: rgba(177, 138, 237, .16);
+}
+
+.signal-divider i {
+  background: linear-gradient(90deg, transparent, rgba(139,92,246,.55), rgba(236,122,183,.24), transparent);
+}
+
+.timeline::before {
+  background: linear-gradient(180deg, #7c3aed 0%, #a855f7 45%, rgba(236,122,183,.60) 74%, rgba(160,126,210,.16) 100%);
+  box-shadow: 0 0 18px rgba(124,58,237,.16);
+}
+
+.timeline-node {
+  border-color: #b690f7;
+  background: #12091f;
+  box-shadow: 0 0 0 5px rgba(124,58,237,.09), 0 0 20px rgba(168,85,247,.28);
+}
+
+.timeline-date,
+.credential-year {
+  color: #b59bd9;
+}
+
+.status-pill,
+.pending-label {
+  color: #eadffc;
+  border-color: rgba(184, 145, 246, .30);
+  background: rgba(78, 38, 132, .20);
+}
+
+.ojt-focus-pending,
+.credential-pending {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(236,122,183,.055), transparent 34%),
+    linear-gradient(180deg, rgba(18,12,31,.93), rgba(9,6,15,.94));
+}
+
+.experience-list li::before,
+.terminal-list li::before {
+  color: #b984ff;
+}
+
+.chip-row span,
+.project-meta span {
+  color: #c7b8dc;
+  border-color: rgba(179, 138, 239, .22);
+  background: rgba(48, 25, 80, .18);
+}
+
+.text-link {
+  color: #c8a6ff;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: #f0a7d1;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.credential-row:hover {
+  border-color: rgba(192, 151, 255, .42);
+  box-shadow: 0 20px 58px rgba(38, 11, 70, .20), 0 0 34px rgba(117, 57, 201, .055);
+}
+
+.meter {
+  border-color: rgba(183, 143, 243, .20);
+  background: rgba(9, 6, 14, .78);
+}
+
+.meter span {
+  background: linear-gradient(90deg, #5b21b6, #8b5cf6 58%, #d66da8 118%);
+  box-shadow: 0 0 14px rgba(139,92,246,.26);
+}
+
+.project-id {
+  color: #6f5d82;
+}
+
+.featured-project,
+.research-project {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(132, 64, 220, .14), transparent 34%),
+    linear-gradient(180deg, rgba(20, 12, 35, .96), rgba(8, 6, 14, .96));
+}
+
+.certificate-card {
+  border-color: rgba(190, 151, 246, .22);
+  background: linear-gradient(180deg, rgba(18,12,31,.92), rgba(9,6,15,.96));
+}
+
+.certificate-visual {
+  border-color: rgba(187, 149, 241, .18);
+  background: #0b0712;
+}
+
+.contact-card::after {
+  background:
+    radial-gradient(circle at 22% 38%, rgba(139,92,246,.19), transparent 30%),
+    radial-gradient(circle at 75% 62%, rgba(236,122,183,.09), transparent 28%);
+}
+
+.site-footer {
+  border-top-color: rgba(177, 139, 237, .16);
+  background: rgba(6,4,10,.72);
+}
+
+.footer-separator {
+  color: #6e617d;
+}
+
+@media (max-width: 780px) {
+  body::before {
+    right: -38vw;
+    opacity: .28;
+  }
+
+  body::after {
+    left: -38vw;
+    opacity: .22;
+  }
+
+  .nav-links {
+    background: rgba(9, 6, 15, .96);
+    border-color: rgba(184, 145, 244, .18);
+  }
+}
+
+
+/* =============================================================
+   V5 REFINEMENT — Graduate wording + wallpaper background
+   Uses supplied chromatic wallpaper at subtle opacity so text
+   remains primary.
+   ============================================================= */
+.chromatic-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(7,5,13,.74), rgba(7,5,13,.80)),
+              url("images/chromatic-wallpaper.png") center center / cover no-repeat;
+  opacity: 0.24;
+  filter: saturate(1.03) contrast(1.04);
+}
+
+.topographic-field {
+  opacity: .24;
+}
+
+body::before,
+body::after {
+  opacity: .28;
+}
+
+.hero {
+  min-height: 64vh;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-description,
+.about .panel p,
+.about .panel li,
+.timeline-content p,
+.timeline-content li,
+.skill-card p,
+.project-card p,
+.credential-card p,
+.contact-card p {
+  text-shadow: 0 1px 1px rgba(0,0,0,.22);
+}
+
+.hero-role {
+  color: #efe9f9;
+}
+
+.profile-card,
+.panel,
+.skill-card,
+.project-card,
+.credential-card,
+.contact-card {
+  backdrop-filter: blur(6px);
+}
+
+.status-pill {
+  white-space: nowrap;
+}
+
+/* =============================================================
+   V6 FIX — PERSISTENT CHROMATIC WALLPAPER TEXTURE
+
+   In V5 the wallpaper used z-index:-5, which could place the
+   image behind the body's opaque background, making it disappear
+   or show inconsistently while scrolling. The decorative layers
+   now use explicit POSITIVE stacking levels, below all content.
+   ============================================================= */
+body {
+  isolation: isolate;
+}
+
+/* The wallpaper itself is deliberately always fixed to the viewport.
+   Opacity remains under the requested 40% maximum. */
+.chromatic-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("images/chromatic-wallpaper.png") center center / cover no-repeat;
+  opacity: .32;
+  filter: none; /* Preserve the supplied wallpaper's actual colors. */
+}
+
+/* Other technical textures remain subtle and sit over the wallpaper,
+   never on top of the text. */
+.topographic-field {
+  z-index: 1;
+  opacity: .09;
+}
+
+.page-grid {
+  z-index: 1;
+  opacity: .52;
+}
+
+.noise {
+  z-index: 1;
+  opacity: .045;
+}
+
+body::before,
+body::after {
+  z-index: 1;
+  opacity: .24;
+}
+
+/* Important: the entire resume sits ABOVE every texture layer.
+   Existing sticky header keeps its z-index:100 behavior. */
+main,
+.site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep reading surfaces reliably legible with the image beneath. */
+.panel {
+  background: linear-gradient(180deg, rgba(17, 11, 29, .90), rgba(7, 5, 15, .92));
+}
+
+@media (max-width: 780px) {
+  .chromatic-wallpaper {
+    background-position: 54% center;
+    opacity: .26;
+  }
+}
+
+
+/* =============================================================
+   V7 REFINEMENT — alignment polish + blended panels
+   ============================================================= */
+.hero {
+  grid-template-columns: minmax(560px, 1.08fr) minmax(390px, 0.92fr);
+  gap: clamp(2.2rem, 4.4vw, 4.25rem);
+}
+
+.hero-copy {
+  max-width: 690px;
+}
+
+.hero h1 {
+  max-width: none;
+  font-size: clamp(2.35rem, 3.7vw, 3.95rem);
+  line-height: 0.98;
+  white-space: nowrap;
+}
+
+.hero-role,
+.hero-description,
+.hero-actions {
+  max-width: 640px;
+}
+
+.hero-description {
+  line-height: 1.55;
+}
+
+.hero-specialties {
+  text-wrap: balance;
+}
+
+.profile-frame {
+  width: min(450px, 100%);
+}
+
+.profile-info h2 {
+  white-space: nowrap;
+  font-size: clamp(1.28rem, 1.9vw, 1.52rem);
+}
+
+.about-grid {
+  grid-template-columns: 1.35fr .8fr .8fr;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.about-grid .panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 1.55rem 1.5rem 1.45rem;
+  background: linear-gradient(180deg, rgba(11, 8, 23, 0.44), rgba(11, 8, 23, 0.28));
+  border-color: rgba(211, 183, 255, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 10px 28px rgba(8,6,20,.10);
+  backdrop-filter: blur(10px) saturate(1.02);
+}
+
+.about-grid .panel::before {
+  width: 64px;
+  background: linear-gradient(90deg, rgba(168,85,247,.95), rgba(236,122,183,.42));
+}
+
+.about-grid .panel h3 {
+  margin: .8rem 0 .9rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.14rem;
+  line-height: 1.15;
+}
+
+.about-grid .panel p,
+.about-grid .panel li {
+  color: #ded8ea;
+}
+
+.about-grid .panel p {
+  font-size: .92rem;
+  line-height: 1.58;
+}
+
+.about-grid .panel p + p {
+  margin-top: .92rem;
+}
+
+.terminal-list {
+  margin-top: .95rem;
+}
+
+.terminal-list li {
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.course-title {
+  line-height: 1.25;
+}
+
+.signal-divider {
+  opacity: .84;
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(350px, .82fr);
+  }
+
+  .hero h1 {
+    white-space: normal;
+    max-width: 12ch;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero h1,
+  .profile-info h2 {
+    white-space: normal;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .about-grid .panel {
+    min-height: 0;
+  }
+}
